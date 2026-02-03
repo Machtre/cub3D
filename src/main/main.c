@@ -6,7 +6,7 @@
 /*   By: mbuisson <mbuisson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 15:09:57 by mbuisson          #+#    #+#             */
-/*   Updated: 2026/02/03 10:30:13 by mbuisson         ###   ########.fr       */
+/*   Updated: 2026/02/03 10:59:12 by mbuisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,6 @@ int	main(int argc, char **argv)
 	init_data(&cub);
 	parse_cub(&cub, argv[1]);
 	cub.move_speed = 0.01;
-	cub.move_speed = 0.02;
-	cub.move_speed = 0.02;
 	init_player(&cub);
 	init_mlx(&cub);
 	load_textures(&cub);
