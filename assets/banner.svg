@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#101a2e"/>
+    </linearGradient>
+    <linearGradient id="ray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2b2b" stop-opacity="0.75"/><stop offset="1" stop-color="#ff2b2b" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="view"><rect x="0" y="0" width="800" height="600"/></clipPath>
+    <style>
+      .t { font-family: 'Courier New', monospace; fill: #e6edf3; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes glow { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
+      .title { animation: glow 2.5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="900" height="260" rx="14" fill="url(#bg)"/>
+
+  <!-- Minimap, same style as in-game (grey frame, light floor, dark walls, red player) -->
+  <g transform="translate(30,40)">
+    <rect width="190" height="180" rx="4" fill="#3c3c3c"/>
+    <rect x="10" y="10" width="170" height="160" fill="#d3d3d3"/>
+    <g fill="#3c3c3c">
+      <rect x="45" y="40" width="20" height="50"/>
+      <rect x="85" y="75" width="70" height="16"/>
+      <rect x="120" y="30" width="22" height="22"/>
+      <rect x="35" y="125" width="30" height="20"/>
+      <rect x="110" y="120" width="45" height="22"/>
+    </g>
+    <g transform="translate(28,25)"><g>
+      <animateMotion dur="10s" repeatCount="indefinite" rotate="auto"
+        path="M0,0 L67,0 Q77,0 77,15 L77,30 Q77,37 67,37 L52,37 Q47,37 47,47 L47,80 Q47,87 57,87 L137,87 L137,125 L52,130 L-6,130 L-6,80 L0,35 Z"/>
+      <path d="M0,0 L60,-26 A65,65 0 0 1 60,26 Z" fill="url(#ray)" opacity="0.6"/>
+      <g stroke="#ff2b2b" stroke-width="0.8" opacity="0.6">
+        <line x1="0" y1="0" x2="60" y2="-26"/><line x1="0" y1="0" x2="65" y2="0"/><line x1="0" y1="0" x2="60" y2="26"/>
+      </g>
+      <circle r="5" fill="#ff1a1a"/>
+    </g></g>
+  </g>
+
+  <!-- First-person view: traced from the real game, with a walking camera bob -->
+  <svg x="240" y="40" width="240" height="180" viewBox="0 0 800 600">
+    <g clip-path="url(#view)">
+      <g>
+        <animateTransform attributeName="transform" type="translate"
+          values="0,0; -14,10; 0,0; 14,10; 0,0" dur="1.6s" repeatCount="indefinite"/>
+        <g>
+          <animateTransform attributeName="transform" type="scale" additive="sum"
+            values="1;1.06;1" dur="6s" repeatCount="indefinite"/>
+<rect x="-60" y="-60" width="920" height="720" fill="#76EE12"/>
+<rect x="-60" y="300" width="920" height="360" fill="#FF4566"/>
+<polygon points="663.0,190.0 860.0,20.0 860.0,600.0 663.0,405.0" fill="#33CC33"/>
+<polygon points="674.8,185.1 848.2,42.8 848.2,87.4 674.8,204.1" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,214.7 848.2,112.5 848.2,157.2 674.8,233.7" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,244.4 848.2,182.3 848.2,226.9 674.8,263.3" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,274.0 848.2,252.0 848.2,296.7 674.8,292.9" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,303.6 848.2,321.8 848.2,366.5 674.8,322.5" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,333.2 848.2,391.6 848.2,436.2 674.8,352.1" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,362.8 848.2,461.3 848.2,506.0 674.8,381.8" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="674.8,392.4 848.2,531.1 848.2,575.7 674.8,411.4" fill="#33CC33" stroke="#00FF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="398.0,200.0 663.0,190.0 663.0,405.0 398.0,395.0" fill="#4169E1"/>
+<polygon points="413.9,203.3 647.1,194.9 647.1,210.1 413.9,217.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,225.1 647.1,218.6 647.1,233.8 413.9,239.1" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,246.9 647.1,242.4 647.1,257.6 413.9,260.9" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,268.7 647.1,266.1 647.1,281.3 413.9,282.7" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,290.5 647.1,289.9 647.1,305.1 413.9,304.5" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,312.3 647.1,313.7 647.1,328.9 413.9,326.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,334.1 647.1,337.4 647.1,352.6 413.9,348.1" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,355.9 647.1,361.2 647.1,376.4 413.9,369.9" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="413.9,377.7 647.1,384.9 647.1,400.1 413.9,391.7" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="263.0,22.0 398.0,152.0 398.0,447.0 263.0,572.0" fill="#FFD200"/>
+<polygon points="271.1,41.8 389.9,151.2 389.9,176.0 271.1,84.6" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,108.7 389.9,190.0 389.9,214.8 271.1,151.4" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,175.5 389.9,228.8 389.9,253.6 271.1,218.3" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,242.3 389.9,267.5 389.9,292.4 271.1,285.1" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,309.2 389.9,306.3 389.9,331.2 271.1,352.0" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,376.0 389.9,345.1 389.9,369.9 271.1,418.8" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,442.9 389.9,383.9 389.9,408.7 271.1,485.6" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="271.1,509.7 389.9,422.7 389.9,447.5 271.1,552.5" fill="#FFD200" stroke="#FFFF00" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-60.0,44.0 263.0,22.0 263.0,572.0 -60.0,545.0" fill="#4169E1"/>
+<polygon points="-40.6,54.0 243.6,35.6 243.6,79.4 -40.6,94.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,117.0 243.6,104.0 243.6,147.8 -40.6,157.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,180.0 243.6,172.4 243.6,216.2 -40.6,220.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,243.0 243.6,240.8 243.6,284.5 -40.6,283.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,306.0 243.6,309.2 243.6,352.9 -40.6,346.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,369.0 243.6,377.5 243.6,421.3 -40.6,409.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,432.0 243.6,445.9 243.6,489.7 -40.6,472.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="-40.6,495.0 243.6,514.3 243.6,558.1 -40.6,535.3" fill="#4169E1" stroke="#0000F0" stroke-width="5" stroke-linejoin="round"/>
+        </g>
+      </g>
+      <!-- mini HUD like in game -->
+      <rect x="22" y="18" width="80" height="48" fill="#3c3c3c"/>
+      <rect x="30" y="26" width="64" height="32" fill="#d3d3d3"/>
+      <rect x="38" y="42" width="48" height="7" fill="#3c3c3c"/>
+      <circle cx="34" cy="34" r="4" fill="#ff1a1a"><animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/></circle>
+    </g>
+  </svg>
+  <rect x="240" y="40" width="240" height="180" rx="3" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Title -->
+  <g transform="translate(520,0)">
+    <text x="0" y="108" class="t title" font-size="62" font-weight="bold">cub<tspan fill="#76EE12">3</tspan>D<tspan class="cursor" fill="#FF4566">_</tspan></text>
+    <text x="2" y="143" class="t" font-size="15" fill="#8b949e">Raycasting engine from scratch</text>
+    <text x="2" y="168" class="t" font-size="15" fill="#8b949e">C · MiniLibX · École 42</text>
+    <g transform="translate(2,188)">
+      <rect width="56" height="22" rx="11" fill="#4169E1" opacity="0.25"/>
+      <text x="28" y="15" text-anchor="middle" class="t" font-size="11" fill="#6f8ff0">DDA</text>
+      <rect x="64" width="84" height="22" rx="11" fill="#FFD200" opacity="0.2"/>
+      <text x="106" y="15" text-anchor="middle" class="t" font-size="11" fill="#FFD200">textures</text>
+      <rect x="156" width="78" height="22" rx="11" fill="#76EE12" opacity="0.2"/>
+      <text x="195" y="15" text-anchor="middle" class="t" font-size="11" fill="#76EE12">minimap</text>
+      <rect x="242" width="70" height="22" rx="11" fill="#FF4566" opacity="0.2"/>
+      <text x="277" y="15" text-anchor="middle" class="t" font-size="11" fill="#FF4566">60 FPS</text>
+    </g>
+  </g>
+</svg>

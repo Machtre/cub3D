@@ -12,7 +12,7 @@
 
 NAME = cub3d
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g -Iincludes -Iminilibx
+CFLAGS = -Wall -Wextra -Werror -g -Iincludes -Iminilibx -std=gnu17
 MLX_DIR = ./minilibx/minilibx-linux
 SRC     = $(wildcard src/*.c src/movement/*.c src/rendering/*.c src/utils/*.c src/mlx/*.c src/main/*.c src/textures/*.c src/parsing/*.c src/GNL/*.c)
 OBJ     = $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mbuisson <mbuisson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:56:24 by nguinot-          #+#    #+#             */
-/*   Updated: 2026/01/30 15:04:27 by mbuisson         ###   ########.fr       */
+/*   Updated: 2026/02/03 12:18:58 by mbuisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ t_tex	*get_wall_texture(t_cub *cub, t_ray *ray)
 
 void	load_textures(t_cub *cub)
 {
-	load_texture(cub, &cub->wall_north, "./north.xpm");
-	load_texture(cub, &cub->wall_south, "./south.xpm");
-	load_texture(cub, &cub->wall_east, "./east.xpm");
-	load_texture(cub, &cub->wall_west, "./west.xpm");
+	load_texture(cub, &cub->wall_north, cub->textures[NO].path);
+	load_texture(cub, &cub->wall_south, cub->textures[SO].path);
+	load_texture(cub, &cub->wall_east, cub->textures[EA].path);
+	load_texture(cub, &cub->wall_west, cub->textures[WE].path);
 }
